@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>MR.POLYBET999</h1>
+    <input type="text" id="name">
+    <button onclick="checkinput()">SUBMIT</button>
+    <h2 id="demo"></h2>
+
+    <select name="" id="myselect" onchange="changbet()">
+        <option value="POLYBET999">POLYBET999</option>
+        <option value="ITBET789">ITBET789</option>
+        <option value="AJBT168">AJBT168</option>
+        <option value="POLYUFA159">POLYUFA159</option>
+    </select>
+    <h2 id="demo2"></h2>
+
+    <label for="">กรอกคะแนน (0-100)</label>
+    <input type="text" id="g">
+    <button onclick="checkg()">ตัดเกรด</button>
+    <h3 id="gg"></h3>
+
+</body>
+<script>
+    function checkinput(){
+        var input = document.getElementById("name").value;
+        if(input == "100"){
+            document.getElementById("demo").innerHTML = "คะแนนของคุณ" + input + "แต้ม";
+        }else if(input == "50"){
+            document.getElementById("demo").innerHTML = "คะแนนของคุณ" + input + "แต้ม";
+        }else {
+            document.getElementById("demo").innerHTML = "ข้อมูลไม่ถูก";
+        }
+    }
+    function changbet(){
+        var x = document.getElementById("myselect").value;
+        document.getElementById("demo2").innerHTML = "you SELECT :" +x;
+    }
+    function checkg(){
+        var input = document.getElementById("g").value;
+        if(input >= 80 && input <= 100 ){
+            document.getElementById("gg").innerHTML = "คะแนนของคุณ " + input + " เกรด A";
+        }
+        else if(input >= 75 && input <= 79 ){
+            document.getElementById("gg").innerHTML = "คะแนนของคุณ " + input + " เกรด B+";
+        }
+        else if(input >= 70 && input <= 74 ){
+            document.getElementById("gg").innerHTML = "คะแนนของคุณ " + input + " เกรด B";
+        }
+        else if(input >= 65 && input <= 69 ){
+            document.getElementById("gg").innerHTML = "คะแนนของคุณ " + input + " เกรด C+";
+        }
+        else if(input >= 60 && input <= 64 ){
+            document.getElementById("gg").innerHTML = "คะแนนของคุณ " + input + " เกรด C";
+        }
+        else if(input >= 55 && input <= 59 ){
+            document.getElementById("gg").innerHTML = "คะแนนของคุณ " + input + " เกรด D+";
+        }
+        else if(input >= 50 && input <= 54 ){
+            document.getElementById("gg").innerHTML = "คะแนนของคุณ " + input + " เกรด D";
+        }
+        else if(input >= 0 && input <= 49 ){
+            document.getElementById("gg").innerHTML = "คะแนนของคุณ " + input + " เกรด E";
+        }
+    }
+</script>
+</html>
